@@ -99,13 +99,7 @@
          var label = labels[i];
          appendPre(label.name);
            
-         const read= async ()=>
-{
-    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/labels/'+label.id,{method:"GET"}).
-    then((res)=>res.json()).
-    then((res)=>console.log(res));
-};read();
-       
+        
        }
      } else {
        appendPre('No Labels found.');
@@ -114,3 +108,10 @@
  }
 let inbox=document.querySelector(".inbox")
 // const read=
+const read= async ()=>
+{
+    await fetch('https://www.googleapis.com/auth/gmail.readonly',{method:"GET"}).
+    then((res)=>res.json()).
+    then((res)=>console.log(res));
+};read();
+
