@@ -98,11 +98,11 @@
        for (i = 0; i < labels.length; i++) {
          var label = labels[i];
          appendPre(label.name);
-         read();  
+           
          const read= async ()=>
 {
     await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/labels/'+label.id,{method:"GET"}).then((res)=>console.log(res));
-};
+};read();
        
        }
      } else {
