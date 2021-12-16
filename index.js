@@ -101,7 +101,9 @@
            
          const read= async ()=>
 {
-    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/labels/'+label.id,{method:"GET"}).then((res)=>console.log(res));
+    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/labels/'+label.id,{method:"GET"}).
+    then((res)=>res.json()).
+    then((res)=>console.log(res));
 };read();
        
        }
