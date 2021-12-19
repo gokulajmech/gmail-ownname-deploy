@@ -101,6 +101,7 @@
            
         
        }
+       console.log(label);
      } else {
        appendPre('No Labels found.');
      }
