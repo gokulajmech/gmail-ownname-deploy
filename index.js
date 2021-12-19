@@ -111,7 +111,7 @@
 const read= async ()=>
 {
   try{
-    await fetch('GET',' https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages/inbox').
+    await fetch(' https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages/inbox',{method:"GET"}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
   }
