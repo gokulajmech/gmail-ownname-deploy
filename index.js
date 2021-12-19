@@ -108,16 +108,35 @@
  }
 // let inbox=document.querySelector(".inbox")
 // const read=
-const read= async ()=>
-{
-  try{
-    await fetch('https://www.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages?labelIds=INBOX&key=386580159833-aqcr073orsalvjkrkavmdd0igbum2mra.apps.googleusercontent.com',{method:'GET'}).
-    then((res)=>res.json()).
-    then((res)=>console.log(res));
-  }
-  catch(error){
-    console.log('Looks like there was a problem: ', error);
-  }
+// const read= async ()=>
+// {
+//   try{
+//     await fetch('https://www.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages?labelIds=INBOX&key=386580159833-aqcr073orsalvjkrkavmdd0igbum2mra.apps.googleusercontent.com',{method:'GET'}).
+//     then((res)=>res.json()).
+//     then((res)=>console.log(res));
+//   }
+//   catch(error){
+//     console.log('Looks like there was a problem: ', error);
+//   }
 
-}
+// }
+const read=()=>{
+// Example 1: Use method-specific function
+var request = gapi.client.drive.about.get({'fields': 'user'});
 
+// Execute the API request.
+request.execute(function(response) {
+  console.log(response);
+});
+
+
+// Example 2: Use gapi.client.request(args) function
+var request = gapi.client.request({
+  'method': 'GET',
+  'path': '/INBOX',
+  'params': {'fields': 'user'}
+});
+// Execute the API request.
+request.execute(function(response) {
+  console.log(response);
+});}
