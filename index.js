@@ -112,8 +112,9 @@
 const read= async ()=>
 {
   try{
-    await fetch(' https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages/inbox',{
-  headers:{ OAuth2accesstoken:CLIENT_ID}}).
+    await fetch(' https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages',{method:"GET",
+  headers:{ OAuth2accesstoken:CLIENT_ID,
+    mode : 'no-cors'}}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
   }
@@ -121,5 +122,5 @@ const read= async ()=>
     console.log('Looks like there was a problem: ', error);
   }
 
-// }
+}
 
