@@ -110,10 +110,15 @@
 // const read=
 const read= async ()=>
 {
-    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET"}).
+  try{
+    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET",
+    body:JSON.stringify('')}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
-};
+  }
+  catch(error){
+    console.log('Looks like there was a problem: ', error);
+  }
 
-
+}
 
