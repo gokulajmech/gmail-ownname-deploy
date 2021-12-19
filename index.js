@@ -111,13 +111,7 @@
 const read= async ()=>
 {
   try{
-    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET",
-    headers: {
-      'Content-Type': 'application/json',
-      apiKey: API_KEY,
-      clientId: CLIENT_ID
-     
-    }}).
+    await fetch('https://www.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages?labelIds=INBOX&key=AIzaSyAcUSQhEcbj_33878C1jzC66tyctgIBDs4',{method:'GET'}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
   }
