@@ -113,7 +113,7 @@ const read= async ()=>
     await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET"}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
-};read();
+};
 
 
 
