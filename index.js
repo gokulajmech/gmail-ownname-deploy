@@ -101,7 +101,7 @@
            
         
        }
-       console.log(label);
+       console.log(label.values);
      } else {
        appendPre('No Labels found.');
      }
@@ -113,7 +113,7 @@ const read= async ()=>
 {
   try{
     await fetch(' https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/messages/inbox',{method:"GET",
-  headers:{ OAuth2accesstoken:clientId}}).
+  headers:{ OAuth2accesstoken:CLIENT_ID}}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
   }
