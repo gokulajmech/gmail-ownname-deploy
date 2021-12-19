@@ -113,8 +113,7 @@ const read= async ()=>
 {
   try{
     await fetch(' https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/inbox',{method:"GET",
-  headers:{ OAuth2accesstoken:CLIENT_ID,
-    mode : 'no-cors'}}).
+  headers:{ OAuth2accesstoken:CLIENT_ID}}).
     then((res)=>res.json()).
     then((res)=>console.log(res));
   }
