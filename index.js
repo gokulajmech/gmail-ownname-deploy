@@ -107,22 +107,24 @@
    });
  }
 // let inbox=document.querySelector(".inbox")
-// const read=
-const read= async ()=>
-{
-  try{
-    await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET",
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-     'clientId': CLIENT_ID
-     
-    }}).
-    then((res)=>res.json()).
-    then((res)=>console.log(res));
-  }
-  catch(error){
-    console.log('Looks like there was a problem: ', error);
-  }
-
+const read=()=>{
+ alert('pass');
 }
+// const read= async ()=>
+// {
+//   try{
+//     await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET",
+//     headers: {
+//       'Content-Type': 'application/json;charset=utf-8',
+//      'clientId': CLIENT_ID
+     
+//     }}).
+//     then((res)=>res.json()).
+//     then((res)=>console.log(res));
+//   }
+//   catch(error){
+//     console.log('Looks like there was a problem: ', error);
+//   }
+
+// }
 
