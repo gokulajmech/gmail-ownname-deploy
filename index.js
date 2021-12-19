@@ -107,17 +107,15 @@
    });
  }
 // let inbox=document.querySelector(".inbox")
-// const read=()=>{
-//  alert('pass');
-// }
+// const read=
 const read= async ()=>
 {
   try{
-   alert('pass');
     await fetch('https://gmail.googleapis.com/gmail/v1/users/gokulrajana@gmail.com/profile',{method:"GET",
     headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-     'clientId': CLIENT_ID
+      'Content-Type': 'application/json',
+      apiKey: API_KEY,
+      clientId: CLIENT_ID
      
     }}).
     then((res)=>res.json()).
