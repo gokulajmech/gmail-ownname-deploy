@@ -149,3 +149,17 @@ gapi.load("client:auth2", function() {
   gapi.auth2.init({client_id: CLIENT_ID});
 });
 
+function messages() {
+  return gapi.client.gmail.users.messages.list({
+    "userId": "gokulrajana@gmail.com",
+    "includeSpamTrash": true
+  })
+      .then(function(response) {
+              // Handle the results here (response.result has the parsed body).
+              console.log("Response", response);
+            },
+            function(err) { console.error("Execute error", err); });
+
+}
+
+
