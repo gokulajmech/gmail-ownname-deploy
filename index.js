@@ -153,7 +153,7 @@ function messages() {
   return gapi.client.gmail.users.messages.list({
     "userId": "gokulrajana@gmail.com",
     "includeSpamTrash": true
-  })
+  }).then(res=>res.json())
       .then(function(response) {
               // Handle the results here (response.result has the parsed body).
               console.log("Response", response);
