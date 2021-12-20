@@ -156,7 +156,7 @@ function messages() {
   })
       .then(function(response) {
               // Handle the results here (response.result has the parsed body).
-              console.log(response);
+              console.log(response.result.labels);
             },
             function(err) { console.error("Execute error", err); });
 
